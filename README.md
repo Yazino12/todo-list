@@ -1,6 +1,18 @@
+![](https://img.shields.io/badge/Microverse-blueviolet)
+
 # To Do list
 
 > This simple web page is built using webpack and served by a webpack dev server
+
+<h2 align="center">
+  Demo 📝
+</h2>
+
+<img src="https://github.com/Yazino12/todo-list/blob/dev/src/assets/demo.png?raw=true" width="1433" height="600">
+
+## Built With
+
+- HTML, CSS, Javascript
 
 ## Getting Started
 
@@ -8,23 +20,28 @@ To get a local copy up and running follow these setup steps.
 
 **Setup**
 
-- Open terminal and clone the project and run : `npm i`
+- Open terminal and clone the project: `git clone https://github.com/Yazino12/todo-list.git`
+- cd into the directory `todo-list`
+
+**Prerequisites**
+
+- You need to have `node.js` installed in your system
+
+**Install**
+
+- On your terminal run : `npm i`
 - To start webpack-dev-server and run locally : `npm start`
-- In case you run into any errors please raise an [issue](https://github.com/Yazino12/awesome-books/issues).
+- In case you run into any errors please raise an [issue](https://github.com/Yazino12/todo-list/issues).
 
-## Built With
+**Usage**
 
-- HTML, CSS, Javascript
+- You may use this project as you like.
 
 ## Authors
 
 👤 **Yasin**
 
 - GitHub: [@Yazino12](https://github.com/Yazino12)
-
-## Live
-
-- Link here: [Live](https://yazino12.github.io/todo-list)
 
 ## 🤝 Contributing
 
@@ -40,4 +57,4 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License
 
-This project has no licenses.
+This project is [MIT](./MIT.md) licensed.

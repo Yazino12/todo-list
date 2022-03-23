@@ -1,7 +1,128 @@
 body {
-  background-color: bisque;
+  display: flex;
+  justify-content: center;
+  min-width: 500px;
+  min-height: 790px;
+  background-color: rgba(0, 0, 0, 0.08);
 }
 
-h1 {
-  color: aqua;
+h2 {
+  color: #545862;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1em;
+  margin: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+textarea {
+  height: 20px;
+  overflow: auto;
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+/* SHARED CLASSES  */
+.stats i,
+.add i,
+.list-item i {
+  opacity: 0.5;
+  color: #333;
+  cursor: pointer;
+}
+
+/* LIST WRAPPER  */
+.list-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: auto;
+  border-radius: 3px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 15%);
+  background-color: #fff;
+}
+
+/* STATS SECTION  */
+.stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* ADD NOTES SECTION  */
+.add {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.add div {
+  flex: 1;
+  padding: 1em;
+}
+
+.add div #note {
+  font-size: 1rem;
+  font-style: italic;
+  border: none;
+  outline: none;
+  width: 95%;
+}
+
+.add button {
+  width: 2.7em;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: #545862;
+}
+
+/* NOTES SECTION  */
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.container .list-item {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.container .list-item .left,
+.container .list-item .right {
+  padding: 1em;
+}
+
+/* BOTTOM SECTION  */
+.bottom {
+  padding: 1em;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.bottom .clear-completed {
+  background-color: transparent;
+  border: none;
+  color: #545862;
+  cursor: pointer;
+}
+
+.bottom .clear-completed:hover {
+  text-decoration: underline;
+  color: #333;
 }
