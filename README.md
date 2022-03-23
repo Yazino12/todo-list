@@ -10,7 +10,7 @@ To get a local copy up and running follow these setup steps.
 
 - Open terminal and clone the project and run : `npm i`
 - To start webpack-dev-server and run locally : `npm start`
-- In case you run into any errors please raise an [issue](https://github.com/Yazino12/awesome-books/issues).
+- In case you run into any errors please raise an [issue](https://github.com/Yazino12/todo-list/issues).
 
 ## Built With
 
