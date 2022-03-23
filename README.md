@@ -43,7 +43,6 @@ To get a local copy up and running follow these setup steps.
 
 - GitHub: [@Yazino12](https://github.com/Yazino12)
 
-
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
@@ -58,4 +57,4 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License
 
-This project has no licenses.
+This project is [MIT](./MIT.md) licensed.
