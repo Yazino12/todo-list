@@ -2,11 +2,11 @@
 
 > This simple web page is built using webpack and served by a webpack dev server
 
-<h1 align="center">
+<h2 align="center">
   Demo 📝
-</h1>
+</h2>
 
-<img src="https://github.com/Yazino12/todo-list/blob/dev/src/assets/demo.png?raw=true" width="1200" height="250">
+<img src="https://github.com/Yazino12/todo-list/blob/dev/src/assets/demo.png?raw=true" width="1433" height="1023">
 
 ## Getting Started
 
