@@ -7,6 +7,7 @@ const deleteItem = (taskArray, fillTask, el) => {
   });
   fillTask();
   el.remove();
+  window.location.reload();
 };
 
 let trigerring = false;
@@ -17,11 +18,12 @@ const add = (tasks) => {
   const container = document.querySelector('.container');
   tasks.forEach((task) => {
     const taskEl = `
-      <li class="list-item"><div class="left"><input type="checkbox" id=${task.index} name=${task.description} value=${task.description}>
-      <label for=${task.index} hidden>${task.description}</label><textarea class="edit" maxlength="255" spellcheck="false" focus>${task.description}</textarea></div><div class="right"><i class="fa-solid fa-ellipsis-vertical"></i><i class="fa-solid fa-trash-can delete"></i></div>
+      <li class="list-item"><div class="left"><input class="checkBox" type="checkbox" id=${task.index} name=${task.description} value=${task.description}>
+      <label for=${task.index} hidden>${task.description}</label><textarea class="edit" maxlength="255" spellcheck="false" focus>${task.description}</textarea></div><div class="right"><i class="fa-solid fa-ellipsis-vertical drag"></i><i class="fa-solid fa-trash-can delete"></i></div>
       </li>`;
 
     container.innerHTML += taskEl;
+    task.completed = false;
   });
 };
 
@@ -53,6 +55,7 @@ const edit = (taskArray, fillTask) => {
   textAreas.forEach((textArea) => {
     textArea.addEventListener('focusin', () => {
       const listEl = textArea.parentNode.parentElement;
+      textArea.style.textDecoration = 'none'; // Removing line-through style
       listEl.classList.add('editing'); // Li element
       listEl.children[1].children[0].classList.add('hidden'); // Vertical dots icon
       listEl.children[1].children[1].classList.remove('hidden'); // Delete icon
@@ -64,6 +67,8 @@ const edit = (taskArray, fillTask) => {
 
     textArea.addEventListener('focusout', () => {
       const listEl = textArea.parentNode.parentElement;
+      const checkBox = listEl.children[0].children[0];
+      if (checkBox.checked) textArea.style.textDecoration = 'line-through'; // Adding line-through style
       listEl.classList.remove('editing'); // Li element
       listEl.children[1].children[0].classList.remove('hidden'); // Vertical dots icon
       listEl.children[1].children[1].classList.add('hidden'); // Delete icon
