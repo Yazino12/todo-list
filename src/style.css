@@ -125,6 +125,10 @@ textarea {
   padding: 1em;
 }
 
+.drag:hover {
+  cursor: move;
+}
+
 .delete:hover {
   color: black;
 }

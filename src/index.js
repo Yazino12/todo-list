@@ -1,10 +1,14 @@
 import './style.css';
+import Form from './modules/form.js';
 import {
   add as Add,
   edit as Edit,
   removeList as Remove,
 } from './modules/functionality.js';
-import Form from './modules/form.js';
+import {
+  isCompleted as IsCompleted,
+  clearAll as ClearAll,
+} from './modules/interactive.js';
 
 class Task {
   constructor(taskArray) {
@@ -12,11 +16,14 @@ class Task {
   }
 
   render = () => {
+    Form(this.fillTask, this.taskArray);
+
     Add(this.taskArray);
     Edit(this.taskArray, this.fillTask);
     Remove(this.taskArray, this.fillTask);
 
-    Form(this.fillTask, this.taskArray);
+    IsCompleted(this.taskArray, this.fillTask);
+    ClearAll(this.taskArray);
   };
 
   // Fill tasks array & localstorage
