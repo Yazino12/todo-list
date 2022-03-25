@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Palette+Mosaic&display=swap');
+
 body {
+  font-family: sans-serif, serif, 'cursive';
   display: flex;
   justify-content: center;
   min-width: 500px;
@@ -7,6 +10,7 @@ body {
 }
 
 h2 {
+  font-family: 'Palette Mosaic', 'cursive', sans-serif;
   color: #545862;
   font-size: 1.2rem;
   font-weight: 400;
@@ -27,8 +31,6 @@ li {
 }
 
 textarea {
-  height: 20px;
-  overflow: auto;
   color: inherit;
   font: inherit;
   margin: 0;
@@ -100,12 +102,59 @@ textarea {
 .container .list-item {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
-.container .list-item .left,
+.container .list-item .left {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  flex: 1;
+  padding: 0 0 0 1em;
+}
+
+.container .list-item .left label {
+  height: 20px;
+  width: 100%;
+  padding: 0.8em 0;
+}
+
 .container .list-item .right {
+  display: flex;
   padding: 1em;
+}
+
+.delete:hover {
+  color: black;
+}
+
+.editing {
+  background-color: #fff9b6;
+}
+
+.edit {
+  display: block;
+  height: 20px;
+  overflow: auto;
+  width: 100%;
+  padding: 0.8em 0;
+  word-wrap: break-word;
+  border: none;
+  outline: none;
+  background: transparent;
+  box-shadow: none;
+  resize: none;
+  appearance: none;
+  cursor: default;
+}
+
+.edit:focus {
+  cursor: text;
+}
+
+.hidden {
+  display: none;
 }
 
 /* BOTTOM SECTION  */

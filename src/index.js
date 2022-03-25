@@ -1,28 +1,38 @@
 import './style.css';
+import {
+  add as Add,
+  edit as Edit,
+  removeList as Remove,
+} from './modules/functionality.js';
+import Form from './modules/form.js';
 
-const tasks = [
-  {
-    description: 'wash the dishes',
-    completed: false,
-    index: 0,
-  },
-  {
-    description: 'complete To Do list project',
-    completed: false,
-    index: 1,
-  },
-];
+class Task {
+  constructor(taskArray) {
+    this.taskArray = taskArray;
+  }
 
-const listPopulator = () => {
-  const container = document.querySelector('.container');
-  tasks.forEach((task) => {
-    const taskEl = `
-    <li class="list-item"><div class="left"><input type="checkbox" id=${task.index} name=${task.index} value=${task.index}>
-    <label for=${task.index}>${task.description}</label></div><div class="right"><i class="fa-solid fa-ellipsis-vertical"></i></div>
-    </li>`;
+  render = () => {
+    Add(this.taskArray);
+    Edit(this.taskArray, this.fillTask);
+    Remove(this.taskArray, this.fillTask);
 
-    container.innerHTML += taskEl;
-  });
-};
+    Form(this.fillTask, this.taskArray);
+  };
 
-listPopulator();
+  // Fill tasks array & localstorage
+
+  fillTask = (data) => {
+    if (data) {
+      this.taskArray.push(data);
+      localStorage.setItem('taskData', JSON.stringify(this.taskArray));
+    } else {
+      localStorage.setItem('taskData', JSON.stringify(this.taskArray));
+    }
+  };
+}
+
+const initializer = new Task(
+  JSON.parse(localStorage.getItem('taskData')) || [],
+);
+initializer.render();
+initializer.fillTask();
