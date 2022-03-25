@@ -1,5 +1,9 @@
 import './style.css';
-import { add as Add, edit as Edit } from './modules/functionality.js';
+import {
+  add as Add,
+  edit as Edit,
+  removeList as Remove,
+} from './modules/functionality.js';
 import Form from './modules/form.js';
 
 class Task {
@@ -10,6 +14,7 @@ class Task {
   render = () => {
     Add(this.taskArray);
     Edit(this.taskArray, this.fillTask);
+    Remove(this.taskArray, this.fillTask);
 
     Form(this.fillTask, this.taskArray);
   };

@@ -1,3 +1,16 @@
+// Global Variables
+const deleteItem = (taskArray, fillTask, el) => {
+  const index = parseInt(el.children[0].children[0].getAttribute('id'), 10);
+  taskArray.splice(index, 1);
+  taskArray.forEach((entry, i) => {
+    entry.index = i;
+  });
+  fillTask();
+  el.remove();
+};
+
+let trigerring = false;
+
 // ADD FUNCTIONALITY
 
 const add = (tasks) => {
@@ -14,14 +27,15 @@ const add = (tasks) => {
 
 // REMOVE FUNCTIONALITY
 
-const removeList = (taskArray, fillTask, el) => {
-  const index = parseInt(el.children[0].children[0].getAttribute('id'), 10);
-  taskArray.splice(index, 1);
-  taskArray.forEach((entry, i) => {
-    entry.index = i;
+const removeList = (taskArray, fillTask) => {
+  const delIcons = document.querySelectorAll('.delete');
+  delIcons.forEach((delIcon) => {
+    delIcon.addEventListener('mousedown', () => {
+      trigerring = true;
+      const listEl = delIcon.parentNode.parentElement;
+      deleteItem(taskArray, fillTask, listEl);
+    });
   });
-  fillTask();
-  el.remove();
 };
 
 // EDIT FUNCTIONALITY
@@ -55,15 +69,18 @@ const edit = (taskArray, fillTask) => {
       listEl.children[1].children[1].classList.add('hidden'); // Delete icon
 
       const index = textArea.parentElement.children[0].getAttribute('id');
-      if (newDesc.trim()) {
-        taskArray[index].description = newDesc.trim();
-        fillTask();
-        newDesc = '';
-      } else {
-        removeList(taskArray, fillTask, listEl);
+      if (!trigerring) {
+        if (newDesc.trim()) {
+          taskArray[index].description = newDesc.trim();
+          fillTask();
+        } else {
+          deleteItem(taskArray, fillTask, listEl);
+        }
       }
+      newDesc = '';
+      trigerring = false;
     });
   });
 };
 
-export { add, edit };
+export { add, edit, removeList };
