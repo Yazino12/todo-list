@@ -8,7 +8,7 @@
   Demo 📝
 </h2>
 
-<img src="https://github.com/Yazino12/todo-list/blob/dev/src/assets/demo.png?raw=true" width="1433" height="600">
+<img src="https://github.com/Yazino12/todo-list/blob/dev/src/assets/demo.png?raw=true" width="881" height="287">
 
 ## Built With
 
