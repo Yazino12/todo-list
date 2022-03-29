@@ -37,6 +37,10 @@ To get a local copy up and running follow these setup steps.
 
 - You may use this project as you like.
 
+## Live
+
+- Link here: [Live](https://yazino12.github.io/todo-list/)
+
 ## Authors
 
 👤 **Yasin**
