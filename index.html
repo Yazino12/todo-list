@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/e32d72064d.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>To-do list</title>
+  <script defer src="/todo-list/index.bundle.js"></script></head>
+  <body>
+    <div class="list-wrapper">
+      <div class="stats">
+        <h2>Today's To Do</h2>
+        <i class="fa-solid fa-rotate"></i>
+      </div>
+      <form class="add" method="post" action="/">
+        <div>
+          <input
+            name="note"
+            id="note"
+            type="text"
+            maxlength="255"
+            placeholder="Add to your list..."
+          />
+          <label for="note" hidden></label>
+        </div>
+        <button type="submit">
+          <i class="fa-solid fa-plus"></i>
+        </button>
+      </form>
+      <ul class="container"></ul>
+      <div class="bottom">
+        <button type="button" class="clear-completed">
+          Clear all completed
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
