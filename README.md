@@ -30,7 +30,8 @@ To get a local copy up and running follow these setup steps.
 **Install**
 
 - On your terminal run : `npm i`
-- To start webpack-dev-server and run locally : `npm start`
+- For Webpack to build and bundle the app files : `npm run build`
+- For Webpack to start the development server : `npm run start`
 - In case you run into any errors please raise an [issue](https://github.com/Yazino12/todo-list/issues).
 
 **Usage**
