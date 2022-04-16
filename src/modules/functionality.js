@@ -88,4 +88,4 @@ const edit = (taskArray, fillTask) => {
   });
 };
 
-export { add, edit, removeList };
+export { add, deleteItem, edit, removeList };
