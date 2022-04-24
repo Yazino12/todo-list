@@ -29,7 +29,7 @@ describe('Add function Tests', () => {
 describe('RemoveList function Test', () => {
   test('Remove element from DOM', () => {
     const element = document.querySelector('.list-item');
-    deleteItem(task, function () {}, element);
+    deleteItem(task, () => {}, element);
     const list = document.querySelector('.container');
     expect(list.children).toHaveLength(0);
   });

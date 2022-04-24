@@ -1,5 +1,3 @@
-const getContainer = () => {
-  return document.querySelector('.container');
-};
+const getContainer = () => document.querySelector('.container');
 
 export default getContainer;
