@@ -1,3 +1,5 @@
+import Container from './container.js';
+
 // Global Variables
 const deleteItem = (taskArray, fillTask, el) => {
   const index = parseInt(el.children[0].children[0].getAttribute('id'), 10);
@@ -15,7 +17,7 @@ let trigerring = false;
 // ADD FUNCTIONALITY
 
 const add = (tasks) => {
-  const container = document.querySelector('.container');
+  const container = Container();
   tasks.forEach((task) => {
     const taskEl = `
       <li class="list-item"><div class="left"><input class="checkBox" type="checkbox" id=${task.index} name=${task.description} value=${task.description}>
@@ -88,6 +90,4 @@ const edit = (taskArray, fillTask) => {
   });
 };
 
-export {
-  add, deleteItem, edit, removeList,
-};
+export { add, deleteItem, edit, removeList };
