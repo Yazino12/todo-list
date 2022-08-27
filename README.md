@@ -1,4 +1,4 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
+![](https://img.shields.io/badge/-Yazino12-yellow)
 
 # To Do list
 
@@ -42,11 +42,13 @@ To get a local copy up and running follow these setup steps.
 
 - Link here: [Live](https://yazino12.github.io/todo-list/)
 
-## Authors
+## Author
 
-👤 **Yasin**
+👤 **Yasin Warsame**
 
 - GitHub: [@Yazino12](https://github.com/Yazino12)
+- Twitter: [@yasino24](https://twitter.com/yasino24)
+- LinkedIn: [yasin-warsame](https://linkedin.com/in/yasin-warsame-a4176217a)
 
 ## 🤝 Contributing
 
